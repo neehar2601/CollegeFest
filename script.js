@@ -93,13 +93,13 @@ document.addEventListener('DOMContentLoaded', function() {
         //     category: "special",
         //     registrationLink: "register-hackathon.html"
         // },
-        {
-            name: "Grand Stage Program",
-            date: "April 11, 2025",
-            description: "Final day celebration with performances, award ceremony, and celebrity guests.",
-            category: "special",
-            registrationLink: "register-finale.html"
-        },
+        // {
+        //     name: "Grand Stage Program",
+        //     date: "April 11, 2025",
+        //     description: "Final day celebration with performances, award ceremony, and celebrity guests.",
+        //     category: "special",
+        //     registrationLink: "register-finale.html"
+        // },
         // {
         //     name: "Debate Championship",
         //     date: "April 8, 2025",
