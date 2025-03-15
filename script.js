@@ -115,10 +115,10 @@ document.addEventListener('DOMContentLoaded', function() {
             {
                 day: "April 1, 2025",
                 events: [
-                    { time: "09:00 AM", event: "Opening Ceremony", venue: "Main Auditorium" },
-                    { time: "10:30 AM", event: "Football Tournament - Day 1", venue: "College Grounds" },
-                    { time: "02:00 PM", event: "Indoor Games Competition", venue: "Student Center" },
-                    { time: "05:00 PM", event: "Esports Tournament", venue: "Computer Lab" }
+                    { time: "07:00 AM", event: "Reporting Time", venue: "MIT Ground" },
+                    { time: "07:30 AM", event: "Jersey Distribution", venue: "MIT Ground" },
+                    { time: "08:00 AM", event: "Breakfast", venue: "MIT Ground" },
+                    { time: "08:30 PM", event: "Event starts", venue: "MIT Ground" }
                 ]
             },
             {
