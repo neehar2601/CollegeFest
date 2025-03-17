@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             name: "Cricket Tournament",
-            date: "April 3-6, 2025",
+            date: "March 31 - April 1, 2025",
             description: "T20 cricket matches between departments and colleges.",
             category: "sports",
             registrationLink: "register-cricket.html"
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const schedule = {
         "week1": [
             {
-                day: "April 1, 2025",
+                day: "March 29, 2025",
                 events: [
                     { time: "07:00 AM", event: "Reporting Time", venue: "MIT Ground" },
                     { time: "07:30 AM", event: "Jersey Distribution", venue: "MIT Ground" },
@@ -122,21 +122,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 ]
             },
             {
-                day: "April 2, 2025",
+                day: "March 31, 2025",
                 events: [
-                    { time: "09:00 AM", event: "Basketball Championship - Day 1", venue: "Sports Complex" },
-                    { time: "10:00 AM", event: "Football Tournament - Day 2", venue: "College Grounds" },
-                    { time: "11:00 AM", event: "Tech Hackathon Begins", venue: "Innovation Lab" },
-                    { time: "02:00 PM", event: "Table Tennis Tournament", venue: "Indoor Stadium" }
+                    // { time: "09:00 AM", event: "Basketball Championship - Day 1", venue: "Sports Complex" },
+                    // { time: "10:00 AM", event: "Football Tournament - Day 2", venue: "College Grounds" },
+                    // { time: "11:00 AM", event: "Tech Hackathon Begins", venue: "Innovation Lab" },
+                    { time: "04:30 PM", event: "Cricket Tournament", venue: "MIT Ground" }
                 ]
             },
             {
-                day: "April 3, 2025",
+                day: "April 1, 2025",
                 events: [
-                    { time: "09:00 AM", event: "Basketball Championship - Day 2", venue: "Sports Complex" },
-                    { time: "10:00 AM", event: "Football Tournament - Finals", venue: "College Grounds" },
-                    { time: "02:00 PM", event: "Cricket Tournament - Day 1", venue: "Cricket Ground" },
-                    { time: "08:00 PM", event: "Tech Hackathon Finale", venue: "Innovation Lab" }
+                    { time: "04:30 AM", event: "Cricket Tournament - Finals", venue: "MIT Cricket Ground" },
                 ]
             },
             {
@@ -160,9 +157,9 @@ document.addEventListener('DOMContentLoaded', function() {
             {
                 day: "April 6, 2025",
                 events: [
-                    { time: "09:00 AM", event: "Cricket Tournament - Finals", venue: "Cricket Ground" },
+                    
                     { time: "02:00 PM", event: "Badminton Tournament", venue: "Indoor Stadium" },
-                    { time: "05:00 PM", event: "Week 1 Closing Event", venue: "College Grounds" }
+                    { time: "05:00 PM", event: "Table Tennis", venue: "College Grounds" }
                 ]
             }
         ],
@@ -208,11 +205,11 @@ document.addEventListener('DOMContentLoaded', function() {
             {
                 day: "April 11, 2025",
                 events: [
-                    { time: "10:00 AM", event: "Exhibition of Winners' Work", venue: "Central Plaza" },
-                    { time: "01:00 PM", event: "Celebrity Meet & Greet", venue: "VIP Lounge" },
-                    { time: "03:00 PM", event: "Award Ceremony", venue: "Main Auditorium" },
-                    { time: "06:00 PM", event: "Grand Stage Program", venue: "College Stadium" },
-                    { time: "09:00 PM", event: "Closing Ceremony & Fireworks", venue: "College Grounds" }
+                    { time: "10:00 AM", event: "Exhibition of Winners' Work", venue: "Library Auditorium" },
+                    { time: "01:00 PM", event: "Celebrity Meet & Greet", venue: "Library Auditorium" },
+                    { time: "03:00 PM", event: "Award Ceremony", venue: "Library Auditorium" },
+                    { time: "06:00 PM", event: "Grand Stage Program", venue: "Library Auditorium" },
+                    { time: "09:00 PM", event: "Closing Ceremony & Fireworks", venue: "Library Auditorium" }
                 ]
             }
         ]
