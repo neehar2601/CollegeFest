@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Sports Events (Week 1)
         {
             name: "Athletic Meet",
-            date: "April 5, 2025",
+            date: "March 29, 2025",
             description: "Annual athletic competition featuring track and field events, relay races, and more.",
             category: "sports",
             registrationLink: "register-athletics.html"

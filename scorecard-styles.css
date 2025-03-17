@@ -1,0 +1,160 @@
+/* Scorecard Specific Styles */
+.scorecard-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-group label {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.filter-group select {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: white;
+    min-width: 150px;
+}
+
+.upload-section {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.upload-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.upload-btn:hover {
+    background-color: #2980b9;
+}
+
+#fileName {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+#scorecard-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    min-height: 400px;
+}
+
+.scorecard-placeholder {
+    text-align: center;
+    color: #777;
+    padding: 4rem 0;
+}
+
+.scorecard-placeholder .small {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.scorecard-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.scorecard-table th {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.8rem;
+    text-align: left;
+}
+
+.scorecard-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.scorecard-table td {
+    padding: 0.8rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.scorecard-info {
+    margin-bottom: 2rem;
+}
+
+.scorecard-info h3 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+}
+
+.scorecard-meta {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.scorecard-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.scorecard-meta-item strong {
+    color: var(--secondary-color);
+}
+
+.winner {
+    background-color: rgba(46, 204, 113, 0.1) !important;
+    font-weight: bold;
+}
+
+.runner-up {
+    background-color: rgba(52, 152, 219, 0.1) !important;
+}
+
+.second-runner-up {
+    background-color: rgba(241, 196, 15, 0.1) !important;
+}
+
+.no-data {
+    text-align: center;
+    padding: 2rem;
+    color: #777;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .scorecard-filters {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .upload-section {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+    
+    .scorecard-table {
+        overflow-x: auto;
+        display: block;
+    }
+}
