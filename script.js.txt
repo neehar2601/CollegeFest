@@ -1,0 +1,170 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Initial data - will be stored in localStorage
+    const initialData = [
+        { group: 'Alchemist', sports: 0, cultural: 0 },
+        { group: 'Mavericks', sports: 0, cultural: 0 },
+        { group: 'Phoenix', sports: 0, cultural: 0 },
+        { group: 'Titans', sports: 0, cultural: 0 }
+    ];
+    
+    // Event categories
+    const eventCategories = {
+        sports: ['running', 'shotput', 'longjump', 'tugofwar', 'cricket', 'badminton', 'tabletennis'],
+        cultural: ['singing', 'dancing', 'cooking']
+    };
+    
+    // Points history - will track all updates
+    const initialHistory = [];
+    
+    // Initialize localStorage if needed
+    if (!localStorage.getItem('pointsData')) {
+        localStorage.setItem('pointsData', JSON.stringify(initialData));
+    }
+    
+    if (!localStorage.getItem('pointsHistory')) {
+        localStorage.setItem('pointsHistory', JSON.stringify(initialHistory));
+    }
+    
+    // Load data from localStorage
+    let pointsData = JSON.parse(localStorage.getItem('pointsData'));
+    let pointsHistory = JSON.parse(localStorage.getItem('pointsHistory'));
+    
+    // Function to update points table
+    function updatePointsTable(filter = 'all') {
+        const tableBody = document.querySelector('#pointsTable tbody');
+        tableBody.innerHTML = '';
+        
+        // Calculate total points and sort by total
+        let tableData = pointsData.map(item => {
+            return {
+                ...item,
+                total: item.sports + item.cultural
+            };
+        });
+        
+        // Sort by total points (descending)
+        tableData.sort((a, b) => b.total - a.total);
+        
+        // Assign ranks
+        let currentRank = 1;
+        let prevTotal = -1;
+        let skipRanks = 0;
+        
+        tableData.forEach((item, index) => {
+            if (item.total !== prevTotal) {
+                currentRank = index + 1 - skipRanks;
+                prevTotal = item.total;
+            } else {
+                skipRanks++;
+            }
+            
+            item.rank = currentRank;
+        });
+        
+        // Filter if needed
+        if (filter !== 'all') {
+            // Filter by event type
+            // We'd need to implement this with the history data
+            // For now, we display all data
+        }
+        
+        // Populate table
+        tableData.forEach(item => {
+            const row = document.createElement('tr');
+            
+            // Add rank-based class for highlighting
+            if (item.rank === 1) {
+                row.classList.add('rank-1');
+            } else if (item.rank === 2) {
+                row.classList.add('rank-2');
+            } else if (item.rank === 3) {
+                row.classList.add('rank-3');
+            }
+            
+            row.innerHTML = `
+                <td>${item.group}</td>
+                <td>${item.sports}</td>
+                <td>${item.cultural}</td>
+                <td>${item.total}</td>
+                <td>${item.rank}</td>
+            `;
+            
+            tableBody.appendChild(row);
+        });
+    }
+    
+    // Event selector change
+    document.getElementById('eventSelector').addEventListener('change', function() {
+        updatePointsTable(this.value);
+    });
+    
+    // Refresh button
+    document.getElementById('refreshTable').addEventListener('click', function() {
+        const filter = document.getElementById('eventSelector').value;
+        updatePointsTable(filter);
+    });
+    
+    // Update the event dropdown based on category selection
+    document.getElementById('categorySelect').addEventListener('change', function() {
+        const category = this.value;
+        const eventSelect = document.getElementById('eventSelect');
+        eventSelect.innerHTML = '<option value="">Select Event</option>';
+        
+        if (category) {
+            eventCategories[category].forEach(event => {
+                const option = document.createElement('option');
+                option.value = event;
+                option.textContent = event.charAt(0).toUpperCase() + event.slice(1);
+                eventSelect.appendChild(option);
+            });
+        }
+    });
+    
+    // Handle form submission
+    document.getElementById('updatePointsForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const group = document.getElementById('groupSelect').value;
+        const category = document.getElementById('categorySelect').value;
+        const event = document.getElementById('eventSelect').value;
+        const points = parseInt(document.getElementById('pointsInput').value);
+        
+        if (!group || !category || !event || !points) {
+            alert('Please fill all fields');
+            return;
+        }
+        
+        // Add to history
+        const historyEntry = {
+            timestamp: new Date().toISOString(),
+            group,
+            category,
+            event,
+            points
+        };
+        
+        pointsHistory.push(historyEntry);
+        localStorage.setItem('pointsHistory', JSON.stringify(pointsHistory));
+        
+        // Update points data
+        pointsData.forEach(item => {
+            if (item.group === group) {
+                item[category] += points;
+            }
+        });
+        
+        localStorage.setItem('pointsData', JSON.stringify(pointsData));
+        
+        // Update table
+        updatePointsTable();
+        
+        // Reset form
+        this.reset();
+        
+        // Show success message
+        alert(`Added ${points} points to ${group} for ${event}`);
+    });
+    
+    // Initial table load
+    updatePointsTable();
+});

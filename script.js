@@ -86,13 +86,13 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         
         // Special Events
-        // {
-        //     name: "Tech Hackathon",
-        //     date: "April 2-3, 2025",
-        //     description: "24-hour coding challenge to build innovative solutions for real-world problems.",
-        //     category: "special",
-        //     registrationLink: "register-hackathon.html"
-        // },
+        {
+            name: "Stage Program",
+            date: "April 11, 2025",
+            description: "Final showdown and closure of MSIS College fest Felicity. Register below to showcase your talent",
+            category: "special",
+            registrationLink: "https://forms.gle/nRFYkhZYVVcRxSyL6"
+        },
         // {
         //     name: "Grand Stage Program",
         //     date: "April 11, 2025",
@@ -140,26 +140,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 day: "April 4, 2025",
                 events: [
                     { time: "09:00 AM", event: "Basketball Championship - Finals", venue: "Sports Complex" },
-                    { time: "01:00 PM", event: "Cricket Tournament - Day 2", venue: "Cricket Ground" },
+                    // { time: "01:00 PM", event: "Cricket Tournament - Day 2", venue: "Cricket Ground" },
                     { time: "03:00 PM", event: "Volleyball Tournament", venue: "Volleyball Court" },
-                    { time: "06:00 PM", event: "Sports Quiz", venue: "Seminar Hall" }
+                    // { time: "06:00 PM", event: "Sports Quiz", venue: "Seminar Hall" }
                 ]
             },
             {
                 day: "April 5, 2025",
                 events: [
-                    { time: "08:00 AM", event: "Athletic Meet", venue: "College Stadium" },
-                    { time: "09:00 AM", event: "Cricket Tournament - Day 3", venue: "Cricket Ground" },
+                    // { time: "08:00 AM", event: "Athletic Meet", venue: "College Stadium" },
+                    // { time: "09:00 AM", event: "Cricket Tournament - Day 3", venue: "Cricket Ground" },
                     { time: "02:00 PM", event: "Chess Tournament", venue: "Student Center" },
-                    { time: "06:00 PM", event: "Sports Day Award Ceremony", venue: "Main Auditorium" }
+                //     { time: "06:00 PM", event: "Sports Day Award Ceremony", venue: "Main Auditorium" }
                 ]
             },
             {
                 day: "April 6, 2025",
                 events: [
                     
-                    { time: "02:00 PM", event: "Badminton Tournament", venue: "Indoor Stadium" },
-                    { time: "05:00 PM", event: "Table Tennis", venue: "College Grounds" }
+                    { time: "09:00 AM", event: "Badminton Tournament", venue: "Indoor Stadium" },
+                    { time: "12:00 PM", event: "Table Tennis", venue: "College Grounds" }
                 ]
             }
         ],
@@ -205,11 +205,11 @@ document.addEventListener('DOMContentLoaded', function() {
             {
                 day: "April 11, 2025",
                 events: [
-                    { time: "10:00 AM", event: "Exhibition of Winners' Work", venue: "Library Auditorium" },
-                    { time: "01:00 PM", event: "Celebrity Meet & Greet", venue: "Library Auditorium" },
-                    { time: "03:00 PM", event: "Award Ceremony", venue: "Library Auditorium" },
-                    { time: "06:00 PM", event: "Grand Stage Program", venue: "Library Auditorium" },
-                    { time: "09:00 PM", event: "Closing Ceremony & Fireworks", venue: "Library Auditorium" }
+                    { time: "10:00 AM", event: "We will be right back with schedule", venue: "Library Auditorium" }
+                    // { time: "01:00 PM", event: "Celebrity Meet & Greet", venue: "Library Auditorium" },
+                    // { time: "03:00 PM", event: "Award Ceremony", venue: "Library Auditorium" },
+                    // { time: "06:00 PM", event: "Grand Stage Program", venue: "Library Auditorium" },
+                    // { time: "09:00 PM", event: "Closing Ceremony & Fireworks", venue: "Auditorium" }
                 ]
             }
         ]
@@ -325,4 +325,5 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
         });
     });
+    
 });
